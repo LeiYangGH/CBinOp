@@ -8,8 +8,8 @@ int main()
 			printf("fail to open file to write\n");
 			return 0;
 		}
-	char chs[] = {'h','e','l','l','o'};
-	fwrite(chs,sizeof(char),5,fp);
+	char chs[] = {'h','e','l','l','o',0x0A};
+	fwrite(chs,sizeof(char),6,fp);
 	fclose(fp);
 	printf("done!\n");
 //system("pause");
